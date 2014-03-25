@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.smartpush.app" version = "1.0.0" versionCode = "1">
+
+
+    <name>VoIP Metrics Calc</name>
+    <description>
+        VoIP Metrics Calculator
+    </description>
+
+    <author email="jon@digipigeon.com" href="http://www.digipigeon.com">
+        Digipigeon Limited
+    </author>
+
+    <preference name="phonegap-version"           value="3.1.0" />   
+
+    <preference name="permissions"                value="none"/>
+    <preference name="orientation"                value="default" />       
+    <preference name="fullscreen"                 value="true" />          
+    <preference name="webviewbounce"              value="true" />           
+    <preference name="prerendered-icon"           value="true" />           
+    <preference name="stay-in-webview"            value="false" />          
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   
+    <preference name="detect-data-types"          value="true" />          
+    <preference name="exit-on-suspend"            value="false" />          
+    <preference name="show-splash-screen-spinner" value="true" />           
+    <preference name="auto-hide-splash-screen"    value="true" />           
+    <preference name="disable-cursor"             value="false" />          
+    <preference name="android-minSdkVersion"      value="7" />              
+    <preference name="android-installLocation"    value="auto" />
+
+          
+	<!-- Core plugins -->
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+	
+	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+
+	<access origin="http://127.0.0.1*"/>
+    <access origin="*" />
+	
+</widget>

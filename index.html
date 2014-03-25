@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VoIP Metrics Calculator</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet"  href="css/jquery.mobile-1.4.2.min.css"/>
+		
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/jquery.mobile-1.4.2.min.js"></script> 
+		
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<style>
+			.label{
+				width:10%;
+				float:left;
+				padding-top:11px
+			}
+			.field{
+				width:85%;
+				float:left;
+			}
+			.check{
+				width:5%;
+				float:left;
+				text-align:right;
+			}
+			form > div{
+				clear: both;
+				padding:0px
+			}
+			input[type=radio]{
+				display: none;
+			}
+			#box-acd label, #box-acd a{
+				background-color: #ff9400;
+			}
+			#box-asr label, #box-asr a{
+				background-color: #00a3c7;
+			}
+			#box-channels label, #box-channels a{
+				background-color: #8cc700;
+			}
+			#box-cps label, #box-cps a{
+				background-color: #fec500;
+			}
+			#box-pdd label, #box-pdd a{
+				background-color: #db3535;
+			}
+			#box-ringtime label, #box-ringtime a{
+				background-color: #d984cb;
+			}
+			
+		</style>
+	</head>
+  
+	<body onload="startApp()">
+	    <div data-role="page" id="home">
+	    	<div data-role="header" data-theme="a">
+	    		<h1>VoIP Metrics</h1>
+	    		<a href="#about" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-grid">Info</a>
+	    	</div>
+			<div data-role="content">
+				<form>
+	        		<div id="box-acd">
+						<input type="radio" name="live" id="rad-acd" value="acd" checked="checked" /> <label for="rad-acd">ACD</label>
+						<input type="range" name="acd" id="acd" value="30" min="0" max="1800" />
+					</div>
+	        		<div id="box-asr">
+						<input type="radio" name="live" id="rad-asr" value="asr"/> <label for="rad-asr">ASR</label>
+						<input type="range" name="asr" id="asr" value="70" min="0" max="100" />
+					</div>
+	        		<div id="box-channels">
+						<input type="radio" name="live" id="rad-channels" value="channels"/> <label for="rad-channels">Channels</label>
+						<input type="range" name="channels" id="channels" value="300" min="0" max="5000" />
+					</div>
+	        		<div id="box-cps">
+						<input type="radio" name="live" id="rad-cps" value="cps"/> <label for="rad-cps">CPS</label>
+						<input type="range" name="cps" id="cps" value="10" min="0" max="500" />
+					</div>
+	        		<div id="box-pdd">
+						<input type="radio" name="live" id="rad-pdd" value="pdd"/> <label for="rad-pdd">PDD</label>
+						<input type="range" name="pdd" id="pdd" value="2" min="0" max="15" />
+					</div>
+	        		<div id="box-ringtime">
+						<input type="radio" name="live" id="rad-ringtime" value="ringtime"/> <label for="rad-ringtime">Avg Ring Time</label>
+						<input type="range" name="ringtime" id="ringtime" value="10" min="0" max="60" />
+					</div>
+				</form>
+			</div>
+		</div><!-- /page -->
+
+	    <div data-role="page" id="about">
+	    	<div data-role="header" data-theme="a">
+	    		<h1>About</h1>
+	    		<a href="#home" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l">About</a>
+			</div>
+			<div data-role="content">
+				<h2>Usage</h2>
+				<p>To use this app, click on the metric which you wish to find out. Then move the sliders to the best known values for the other parameters</p>
+				
+				<h2>Created By</h2>
+
+				<h3>Digipigeon Limited</h3>
+				<p>Specilists in International Short Duration SIP Traffic</p>
+				<p><a href="http://www.digipigeon.com" class="ui-btn" target="_blank">Digipigeon.com</a></p>
+				
+				
+				<h3>Connex Carrier Services</h3>
+				<p>Providers of Cloudswitch, Free version, to multi-pop infinately &amp; globally scalable.</p>
+				<p><a href="http://www.connexcs.com" class="ui-btn" target="_blank">ConnexCS.com</a></p>
+			</div>
+	    	
+	    	
+		</div>
+	</body>
+</html>
