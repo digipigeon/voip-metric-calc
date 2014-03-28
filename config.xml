@@ -16,7 +16,7 @@
     <preference name="permissions"                value="none"/>
     <preference name="orientation"                value="default" />       
     <preference name="fullscreen"                 value="true" />          
-    <preference name="webviewbounce"              value="true" />           
+    <preference name="webviewbounce"              value="false" />           
     <preference name="prerendered-icon"           value="true" />           
     <preference name="stay-in-webview"            value="false" />          
     <preference name="ios-statusbarstyle"         value="black-opaque" />   
@@ -37,9 +37,10 @@
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
 	
-	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+	<icon src="icon.png" />
 
-	<access origin="http://127.0.0.1*"/>
-    <access origin="*" />
+	<!--<access origin="http://127.0.0.1*"/>-->
+    <access origin="http://www.digipigeon.com" />
+    <access origin="http://www.connexcs.com" />
 	
 </widget>
